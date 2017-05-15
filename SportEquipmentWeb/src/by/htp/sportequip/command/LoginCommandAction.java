@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import by.htp.sportequip.entity.Product;
 import by.htp.sportequip.entity.User;
-import by.htp.sportequip.service.EquipmentService;
-import by.htp.sportequip.service.EquipmentServiceImpl;
+import by.htp.sportequip.service.ProductService;
+import by.htp.sportequip.service.ProductServiceImpl;
 import by.htp.sportequip.service.ServiceNoSuchUserException;
 import by.htp.sportequip.service.UserService;
 import by.htp.sportequip.service.UserServiceImpl;
@@ -17,11 +17,11 @@ import static by.htp.sportequip.util.ConstantValue.*;
 public class LoginCommandAction implements CommandAction{
 	
 	private UserService userService;
-	private EquipmentService equipService;
+	private ProductService equipService;
 	
 	public LoginCommandAction(){
 		userService = new UserServiceImpl();
-		equipService = new EquipmentServiceImpl();
+		equipService = new ProductServiceImpl();
 	}
 	
 	@Override

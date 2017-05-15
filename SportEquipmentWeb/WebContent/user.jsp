@@ -21,13 +21,18 @@
 </head>
 <body background="sport.jpg">
 	<h1 style="text-align: center">Welcome User!</h1>
+	<form action="MainServlet" method="GET">
+		<input type="hidden" name="action" value="make_order">
+		<input type="submit" value="make order">
+	</form>
 	<table>
 		<tr>
-			<th colspan="3" style="text-align: center"><h2>List of
+			<th colspan="4" style="text-align: center"><h2>List of
 					available equipments</h2></th>
 		</tr>
 		<tr>
 			<th>#</th>
+			<th>Item</th>
 			<th>Title</th>
 			<th>Price</th>
 		</tr>
@@ -35,11 +40,14 @@
 
 			<tr>
 				<td><h4>
-						<c:out value="${list_eq.indexOf(i)}" />
+						<c:out value="${list_eq.indexOf(i)+1}" />
 					</h4></td>
 				<td><h4>
 						<c:out value="${i.getItemName()}" />
 					</h4></td>
+				<td><h4>
+						<c:out value="${i.getTitle()}" />
+				</h4></td>
 				<td><h4>
 						<c:out value="${i.getPrice()}" />
 					</h4></td>

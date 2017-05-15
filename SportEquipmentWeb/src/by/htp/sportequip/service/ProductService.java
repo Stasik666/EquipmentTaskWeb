@@ -4,7 +4,7 @@ import java.util.List;
 
 import by.htp.sportequip.entity.Product;
 
-public interface EquipmentService {
+public interface ProductService {
 	
 	List<Product> list();
 
